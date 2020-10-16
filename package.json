@@ -8,7 +8,7 @@
     "build": "yarn build:reflection && tsc",
     "build:reflection": "NEXUS_SHOULD_EXIT_AFTER_REFLECTION=true ts-node api",
     "dev": "ts-node-dev --transpile-only api",
-    "dev:migrate": "prisma migrate save --experimental -c && prisma migrate up --experimental -c",
+    "dev:migrate": "prisma migrate save --experimental -c && prisma migrate up --experimental -c && prisma generate",
     "dev:typecheck": "tsc --watch --noEmit",
     "format": "npx prettier --write './**/*.{ts,md}'",
     "start": "NODE_ENV=production node .nexus/build",
